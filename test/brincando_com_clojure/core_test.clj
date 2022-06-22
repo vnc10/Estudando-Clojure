@@ -17,3 +17,27 @@
   (testing "valor da compra mais de 200 reais"
     (let [valor 250]
       (is (= 0 (taxa-de-entrega valor))))))
+
+(deftest tamanho-vetor-add
+  (testing "tamanho do vetor "
+    (let [vetor ["oi" "teste"]]
+      (is
+        (= 3 (count (adicionar-elemento-no-final-do-vetor vetor)))))))
+
+(deftest tamanho-vetor-remover
+  (testing "tamanho do vetor remover "
+    (let [vetor ["oi" "teste"]]
+      (is
+        (= 1 (count (remover-elemento-no-final-do-vetor vetor)))))))
+
+(deftest obter-primeiro-elemento-test
+  (testing "obter primeiro elemento"
+    (let [vetor [1 2]]
+      (is
+        (= 1 (obter-primeiro-elemento vetor))))))
+
+(deftest substituir-primeiro-elemento-test
+  (testing "substituir primeiro elemento"
+    (let [vetor [1 2] num 10]
+      (is
+        (= 10 (get (substituir-primeiro-elemento vetor num) 0))))))
