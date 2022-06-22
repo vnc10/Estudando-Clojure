@@ -18,17 +18,29 @@
     (let [valor 250]
       (is (= 0 (taxa-de-entrega valor))))))
 
-(deftest tamanho-vetor-add
-  (testing "tamanho do vetor "
-    (let [vetor ["oi" "teste"]]
+(deftest adicionar-elemento-no-final-do-vetor-test
+  (testing "Adicionar elemento no final do vetor"
+    (let [vetor [1 2]]
+      (is
+        (= 3 (get (adicionar-elemento-no-final-do-vetor vetor) 2))))))
+
+(deftest adicionar-elemento-no-final-do-vetor-test-2
+  (testing "Adicionar elemento no final do vetor"
+    (let [vetor [1 2]]
       (is
         (= 3 (count (adicionar-elemento-no-final-do-vetor vetor)))))))
 
-(deftest tamanho-vetor-remover
-  (testing "tamanho do vetor remover "
-    (let [vetor ["oi" "teste"]]
+(deftest remover-elemento-no-final-do-vetor-test
+  (testing "Remover elemento no final do vetor"
+    (let [vetor [1 2]]
       (is
         (= 1 (count (remover-elemento-no-final-do-vetor vetor)))))))
+
+(deftest remover-elemento-no-final-do-vetor-test-2
+  (testing "Remover elemento no final do vetor"
+    (let [vetor [1 2]]
+      (is
+        (= 1 (get (remover-elemento-no-final-do-vetor vetor) 0))))))
 
 (deftest obter-primeiro-elemento-test
   (testing "obter primeiro elemento"

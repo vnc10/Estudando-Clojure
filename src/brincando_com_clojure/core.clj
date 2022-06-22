@@ -10,7 +10,7 @@
 
 (defn adicionar-elemento-no-final-do-vetor
   [vetor]
-  (conj vetor "Teste3"))
+  (conj vetor 3))
 
 (defn remover-elemento-no-final-do-vetor
   [vetor]
