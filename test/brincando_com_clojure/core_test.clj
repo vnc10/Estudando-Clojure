@@ -53,3 +53,10 @@
     (let [vetor [1 2] num 10]
       (is
         (= 10 (get (substituir-primeiro-elemento vetor num) 0))))))
+
+
+(deftest imposto-retido-deve-ser-0-test
+  (testing "imposto retido deve ser 0 quando for menor que 1000"
+    (let [num 900]
+      (is
+        (= 0 (calcular-imposto num))))))

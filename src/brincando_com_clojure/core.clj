@@ -23,5 +23,3 @@
 (defn substituir-primeiro-elemento
   [vetor substituir]
   (assoc vetor 0 substituir))
-
-(def nova-funcao)
