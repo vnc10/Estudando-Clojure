@@ -28,7 +28,7 @@
 
 (defn desafio-2
   [idades]
-    (reduce + idades))
+  (reduce + idades))
 
 (desafio-2 [5 10 5])
 
@@ -43,5 +43,20 @@
 
 ;Desafio 4: Crie um função que receba um vetor de nomes e retorne o tamanho medio dos nomes;
 ;deve-se ignorar nomes com 3 ou menos caracteres
+;Ex: ["Marcio" "Joao" "Vin" "Carol"] ; deve retornar 5
+
+(defn- remover-nomes-menor-que-3
+  [nomes]
+  (> nomes 3))
+
+(defn calcular-media
+  [nomes]
+  (/ (reduce + nomes) (count nomes)))
+
+(defn desafio-4
+  [nomes]
+  (calcular-media (filter remover-nomes-menor-que-3 (map count nomes))))
+
+(desafio-4 ["Marcio" "Joao" "Vin" "Carol"])
 
 
